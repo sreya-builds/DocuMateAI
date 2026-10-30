@@ -1,0 +1,15 @@
+DocuMate turns long, hard-to-read college documents (notices, scholarship circulars, 
+assignment briefs, syllabi, placement posts) into short, clear, 
+actionable summaries, so students never miss a deadline
+ or a requirement.
+
+Phase 1: Environment setup
+Phase 2: Frontend HTML structure
+Phase 3: CSS design
+Phase 4: Frontend JavaScript
+Phase 5: Backend with Express
+Phase 6: Gemini API integration
+Phase 7: PDF processing
+Phase 8: AI features
+Phase 9: Testing and security
+Phase 10: GitHub and deployment
