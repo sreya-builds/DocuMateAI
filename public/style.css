@@ -1,0 +1,733 @@
+
+/* =====================================
+   1. GLOBAL STYLES
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #17172f;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.purple {
+  color: #6957e8;
+}
+
+
+/* =====================================
+   2. NAVIGATION BAR
+===================================== */
+
+.navbar {
+  min-height: 85px;
+  padding: 15px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #eeeef5;
+  background: #ffffff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #17172f;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.logo-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: white;
+  font-size: 25px;
+  background: linear-gradient(135deg, #6556e9, #9954e8);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: #62657c;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #6957e8;
+}
+
+.nav-button,
+.primary-button {
+  border: none;
+  border-radius: 13px;
+  padding: 16px 24px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(110deg, #6258e9, #8952e8);
+  box-shadow: 0 10px 25px rgba(100, 83, 225, 0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(100, 83, 225, 0.28);
+}
+
+.nav-button span,
+.primary-button span {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+
+/* =====================================
+   3. HERO SECTION
+===================================== */
+
+.hero {
+  min-height: 650px;
+  padding: 90px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  background: #fcfbff;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 17px;
+  border: 1px solid #e7e3fa;
+  border-radius: 30px;
+  background: white;
+  color: #555b88;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #6958ed;
+}
+
+.hero h1 {
+  margin-top: 32px;
+  font-size: clamp(45px, 5.1vw, 72px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  background: linear-gradient(100deg, #6256e9, #9954e8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-description {
+  max-width: 550px;
+  margin-top: 30px;
+  color: #74768c;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.privacy-note {
+  color: #73778a;
+  font-size: 14px;
+}
+
+.shield {
+  color: #149c70;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 7px;
+}
+
+
+/* =====================================
+   4. HERO DOCUMENT ILLUSTRATION
+===================================== */
+
+.hero-visual {
+  min-height: 420px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.document-card {
+  width: 80%;
+  min-height: 390px;
+  padding: 28px;
+  position: relative;
+  border: 1px solid #e9e6f4;
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 25px 65px rgba(41, 37, 91, 0.12);
+  transform: rotate(1deg);
+}
+
+.document-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eeeef5;
+}
+
+.pdf-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #ef526b;
+  background: #fff0f2;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.document-heading h3 {
+  font-size: 16px;
+}
+
+.document-heading p {
+  margin-top: 7px;
+  font-size: 12px;
+  color: #9899aa;
+}
+
+.more {
+  margin-left: auto;
+  color: #a6a6b8;
+}
+
+.document-lines {
+  padding-top: 32px;
+}
+
+.document-lines div {
+  height: 9px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  background: #e9e8ee;
+}
+
+.document-lines div:nth-child(2) {
+  width: 88%;
+}
+
+.document-lines div:nth-child(3) {
+  width: 95%;
+}
+
+.document-lines .highlight-line {
+  width: 82%;
+  height: 14px;
+  background: #ded7ff;
+  box-shadow: 0 0 0 7px #f3f0ff;
+}
+
+.document-lines div:nth-child(5) {
+  width: 90%;
+}
+
+.document-lines div:nth-child(6) {
+  width: 65%;
+}
+
+.understood-label {
+  position: absolute;
+  bottom: 24px;
+  right: 25px;
+  padding: 13px 17px;
+  border-radius: 30px;
+  background: #edfaf6;
+  border: 1px solid #d1f0e5;
+  color: #15866a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.date-card,
+.answer-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px;
+  background: white;
+  border: 1px solid #eeeaf7;
+  border-radius: 17px;
+  box-shadow: 0 15px 40px rgba(40, 35, 90, 0.12);
+}
+
+.date-card {
+  top: 65px;
+  left: -10px;
+}
+
+.answer-card {
+  bottom: 30px;
+  right: -10px;
+}
+
+.date-icon,
+.check-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #f0edff;
+  color: #6859ed;
+  font-size: 20px;
+}
+
+.check-icon {
+  background: #e7f8f1;
+  color: #149d70;
+}
+
+.date-card small,
+.answer-card small {
+  display: block;
+  margin-bottom: 6px;
+  color: #9999a9;
+  font-size: 11px;
+}
+
+.date-card strong,
+.answer-card strong {
+  font-size: 12px;
+}
+
+
+/* =====================================
+   5. COMMON SECTION HEADING
+===================================== */
+
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.section-heading span {
+  color: #6859e9;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+  margin-top: 15px;
+  font-size: 35px;
+  line-height: 1.3;
+}
+
+.section-heading p {
+  margin-top: 15px;
+  color: #77798d;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* =====================================
+   6. FIVE ASSISTANT MODULES
+===================================== */
+
+.assistant-section {
+  padding: 90px 6%;
+  background: #fcfbff;
+}
+
+.assistant-grid {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.assistant-card {
+  min-height: 190px;
+  padding: 28px;
+  text-align: left;
+  border: 1px solid #eeedf5;
+  border-radius: 18px;
+  background: white;
+  transition: 0.2s;
+}
+
+.assistant-card:hover {
+  border-color: #7155e8;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(100, 83, 225, 0.12);
+}
+
+.assistant-card span {
+  font-size: 30px;
+}
+
+.assistant-card h3 {
+  margin-top: 18px;
+  color: #17172f;
+  font-size: 18px;
+}
+
+.assistant-card p {
+  margin-top: 10px;
+  color: #77798d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =====================================
+   7. HOW IT WORKS
+===================================== */
+
+.features-section {
+  padding: 100px 6%;
+  background: #ffffff;
+}
+
+.features-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  padding: 30px;
+  border: 1px solid #eeedf5;
+  border-radius: 18px;
+  background: white;
+  transition: 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(41, 37, 91, 0.07);
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #f0edff;
+  color: #6656e8;
+  font-size: 24px;
+}
+
+.feature-card h3 {
+  margin-top: 22px;
+  font-size: 19px;
+}
+
+.feature-card p {
+  margin-top: 12px;
+  color: #77798d;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =====================================
+   8. DOCUMENT WORKSPACE
+===================================== */
+
+.workspace-section {
+  padding: 90px 6%;
+  background: #f8f7ff;
+}
+
+.workspace-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 45px;
+  border: 1px solid #efedf8;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 15px 45px rgba(41, 37, 91, 0.07);
+}
+
+.workspace-label {
+  color: #6859e9;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.workspace-card h2 {
+  margin-top: 12px;
+  font-size: 32px;
+}
+
+.workspace-card > p {
+  margin: 12px 0 30px;
+  color: #77798d;
+  line-height: 1.7;
+}
+
+.workspace-card label {
+  display: block;
+  margin: 22px 0 10px;
+  color: #252541;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.workspace-card textarea,
+.workspace-card input[type="text"],
+.workspace-card select {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #e5e3ef;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #252541;
+  outline: none;
+}
+
+.workspace-card textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.workspace-card input[type="file"] {
+  width: 100%;
+  padding: 14px;
+  border: 1px dashed #c9c3e9;
+  border-radius: 12px;
+  background: #fcfbff;
+}
+
+.workspace-card textarea:focus,
+.workspace-card input:focus,
+.workspace-card select:focus {
+  border-color: #7764e9;
+  box-shadow: 0 0 0 3px #f0edff;
+}
+
+.ask-button {
+  margin-top: 25px;
+}
+
+.answer-area {
+  margin-top: 25px;
+  padding: 20px;
+  min-height: 65px;
+  border-radius: 12px;
+  background: #f8f7ff;
+  color: #77798d;
+  line-height: 1.7;
+}
+
+
+/* =====================================
+   9. FOOTER
+===================================== */
+
+footer {
+  padding: 30px 6%;
+  text-align: center;
+  background: #ffffff;
+  border-top: 1px solid #eeeeF5;
+  color: #85869a;
+  font-size: 13px;
+}
+
+
+/* =====================================
+   10. TABLET RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    padding: 18px 5%;
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 65px 6%;
+  }
+
+  .hero-visual {
+    margin-top: 25px;
+  }
+
+  .assistant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =====================================
+   11. MOBILE RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 500px) {
+
+  .navbar {
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-button {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 55px 5%;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-visual {
+    min-height: 350px;
+  }
+
+  .document-card {
+    width: 88%;
+    min-height: 330px;
+    padding: 18px;
+  }
+
+  .date-card {
+    left: -5px;
+    top: 25px;
+  }
+
+  .answer-card {
+    right: -5px;
+    bottom: 10px;
+  }
+
+  .assistant-section,
+  .features-section,
+  .workspace-section {
+    padding: 65px 5%;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .assistant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant-card {
+    min-height: 160px;
+  }
+
+  .workspace-card {
+    padding: 25px 18px;
+  }
+
+  .workspace-card h2 {
+    font-size: 27px;
+  }
+
+}
